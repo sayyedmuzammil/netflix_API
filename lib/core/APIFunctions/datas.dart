@@ -54,32 +54,3 @@ Future getTrending() async {
   return trendingList;
 }
 
-// final tmdbData = TMDB(
-//   //TMDB instance
-//   ApiKeys('9a31a0d7c3a54c8289a55b8ea1d5ddfe',
-//       'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YzY1YmVlYzdiNmE5YzUyNmMyYTJlOTk5MTQ1OWU5OSIsInN1YiI6IjYyMWEzNmRhOTJlNTViMDAxYjZkOWNjZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uto3UktLtrnkkK4_1O-Mb3AoWOnSVPVahdtymbXh0Zs'), //ApiKeys instance with your keys,
-// );
-
-// Future<List<dynamic>> getTrending() async {
-//   Map trendingResult = await tmdbData.v3.trending.getTrending();
-//   trendingList = trendingResult["results"];
-//   return trendingList;
-// }
-
-// Future<List<dynamic>> getPopularMovies() async {
-//   Map popularMoviesResult = await tmdbData.v3.movies.getPopular();
-//   popularList = popularMoviesResult["results"];
-//   return popularList;
-// }
-
-// Future<List<dynamic>> getNowPlaying() async {
-//   Map tvShowsResult = await tmdbData.v3.tv.getPopular();
-//   tvShows = tvShowsResult["results"];
-//   return tvShows;
-// }
-
-  // Future<List<dynamic>> getUpComming() async {
-  //   Map upCommingResult = await tmdbData.v3.movies.getUpcoming();
-  //   upcomingList = upCommingResult["results"];
-  //   return upcomingList;
-  // }
