@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/constants.dart';
 import 'package:netflix/presentation/home/widgets/main_title.dart';
-import 'package:netflix/presentation/widgets/APIFunctions/datas.dart';
 
 class MainList extends StatelessWidget {
   final String title;

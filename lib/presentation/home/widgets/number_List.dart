@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/constants.dart';
 import 'package:netflix/presentation/home/widgets/main_title.dart';
 import 'package:netflix/presentation/home/widgets/number_card.dart';
-import 'package:netflix/presentation/widgets/APIFunctions/datas.dart';
 
 class NumberList extends StatelessWidget {
   const NumberList({

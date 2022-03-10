@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:netflix/core/APIFunctions/datas.dart';
 import 'package:netflix/presentation/new_and_hot/widgets/everyOnesList.dart';
-import 'package:netflix/presentation/widgets/APIFunctions/datas.dart';
+
 
 class Scroll2 extends StatelessWidget {
   const Scroll2({

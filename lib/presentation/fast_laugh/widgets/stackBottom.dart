@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/presentation/widgets/APIFunctions/datas.dart';
+import 'package:netflix/core/APIFunctions/datas.dart';
 
 class StackBottom extends StatelessWidget {
   const StackBottom({
