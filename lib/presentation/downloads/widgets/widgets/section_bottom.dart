@@ -11,12 +11,12 @@ class Section3 extends StatelessWidget {
                 horizontal: 98,
               ),
               child: MaterialButton(
-                color: KgreyColor[900],
+                color: kGreyColor[900],
                 onPressed: () {},
                 child: const Text(
                   "Find More to Download",
                   style: TextStyle(
-                    color: KwhiteColor,
+                    color: kWhiteColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

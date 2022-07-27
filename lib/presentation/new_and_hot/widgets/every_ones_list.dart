@@ -1,20 +1,27 @@
 
 import 'package:flutter/material.dart';
+
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/colors/constants.dart';
 import 'package:netflix/presentation/new_and_hot/widgets/button_icon_bottom.dart';
 
-class EveryOnesWatchingList extends StatelessWidget {
-  EveryOnesWatchingList(
-      {Key? key, required this.index, required this.movieList})
-      : super(key: key);
-  final index;
+class EveryOnesWatchingList extends StatefulWidget {
+  final int index;
+ final List movieList;
+   const EveryOnesWatchingList({
+    Key? key,
+    required this.index,
+    required this.movieList,
+  }) : super(key: key);
 
-  List movieList;
+  @override
+  State<EveryOnesWatchingList> createState() => _EveryOnesWatchingListState();
+}
+
+class _EveryOnesWatchingListState extends State<EveryOnesWatchingList> {
   @override
   Widget build(BuildContext context) {
-    String uri = movieList[index]['poster_path'];
-    String movieNameImg = movieList[index]['backdrop_path'];
+    String uri = widget.movieList[widget.index]['poster_path'];
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -58,7 +65,7 @@ class EveryOnesWatchingList extends StatelessWidget {
                         SizedBox(
                           width: 157,
                           child: Text(
-                            movieList[index]['original_title'],
+                            widget.movieList[widget.index]['original_title'],
                             style: const TextStyle(
                                 fontSize: 22, fontWeight: FontWeight.bold),
                           ),
@@ -71,10 +78,10 @@ class EveryOnesWatchingList extends StatelessWidget {
                             icon: Icons.play_arrow_sharp, iconText: "Play"),
                       ],
                     ),
-                    KHeight,
+                    kHeight,
                     Text(
-                      movieList[index]['overview'],
-                      style: const TextStyle(color: KgreyColor),
+                      widget.movieList[widget.index]['overview'],
+                      style: const TextStyle(color: kGreyColor),
                     ),
                   ],
                 ),

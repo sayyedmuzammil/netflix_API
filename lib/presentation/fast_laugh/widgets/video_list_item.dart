@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/presentation/fast_laugh/widgets/stackBottom.dart';
-import 'package:netflix/presentation/fast_laugh/widgets/stackTop.dart';
+import 'package:netflix/presentation/fast_laugh/widgets/stack_bottom.dart';
+import 'package:netflix/presentation/fast_laugh/widgets/stack_top.dart';
 
 class VideoListItem extends StatelessWidget {
   final int index;
@@ -13,7 +13,7 @@ class VideoListItem extends StatelessWidget {
     return Stack(
       children: [
         StackBottom(index: index, size: size),
-        StackTop(),
+        StackTop(index: index,),
       ],
     );
   }

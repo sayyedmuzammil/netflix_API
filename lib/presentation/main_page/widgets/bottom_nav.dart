@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/core/colors/colors.dart';
 
 ValueNotifier<int> indexChangeNotifier=ValueNotifier(0);
 class BottomNavigationWidget extends StatelessWidget {

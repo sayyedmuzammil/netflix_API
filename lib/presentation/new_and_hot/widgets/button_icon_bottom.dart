@@ -19,12 +19,12 @@ const IconTextBottom({
         Container(
           alignment: Alignment.center,
           width: size.width*.1, 
-          child:  Icon(icon, color: KwhiteColor,size: 20,)),
-          KHeight, 
+          child:  Icon(icon, color: kWhiteColor,size: 20,)),
+          kHeight, 
            Container( 
           width: size.width*.16,     
           alignment: Alignment.center,
-          child: Text(iconText, style: const TextStyle(color: KgreyColor, fontSize: 10 , 
+          child: Text(iconText, style: const TextStyle(color: kGreyColor, fontSize: 10 , 
           ),
           ),
           ),

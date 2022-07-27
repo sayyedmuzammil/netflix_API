@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:netflix/core/APIFunctions/datas.dart';
 
@@ -16,11 +17,13 @@ class StackBottom extends StatelessWidget {
     return FutureBuilder(
       future: getUpComming(),
       builder: (context, snapshot) {
-        String uri = upcomingList[index]['poster_path'];
+        // print("444 ${upcomingList.length}");
         if (snapshot.hasData) {
+          String uri = upcomingList[index]['poster_path'];
+
           return Container(
-              height: size.height,
-              width: size.width, 
+            height: size.height,
+            width: size.width,
             decoration: BoxDecoration(
                 image: DecorationImage(
               fit: BoxFit.cover,
@@ -28,10 +31,9 @@ class StackBottom extends StatelessWidget {
             )),
           );
         } else {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child:  CircularProgressIndicator());
         }
       },
     );
   }
 }
-

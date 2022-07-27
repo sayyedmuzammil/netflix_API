@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/APIFunctions/datas.dart';
-import 'package:netflix/presentation/new_and_hot/widgets/comingSoonList.dart';
+import 'package:netflix/presentation/new_and_hot/widgets/coming_soon_list.dart';
 
 
 class Scroll1 extends StatelessWidget {
@@ -24,7 +24,7 @@ class Scroll1 extends StatelessWidget {
               itemBuilder: (ctx, index) {
                 String? date = upcomingList[index]["release_date"];
 
-                return comingSoonList(
+                return ComingSoonList(
                   index: index,
                   date: date!,
                   movieList: upcomingList,

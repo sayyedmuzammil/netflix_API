@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:netflix/core/APIFunctions/datas.dart';
 import 'package:netflix/core/colors/constants.dart';
-import 'package:netflix/presentation/home/widgets/Main_list.dart';
+import 'package:netflix/presentation/home/widgets/main_list.dart';
 import 'package:netflix/presentation/home/widgets/background_card.dart';
-import 'package:netflix/presentation/home/widgets/number_List.dart';
+import 'package:netflix/presentation/home/widgets/number_list.dart';
 
 ValueNotifier<bool> scrollNotifier=ValueNotifier(true);
 
@@ -32,7 +32,7 @@ class ScreenHome extends StatelessWidget {
             children: [
               ListView(
                   children: [
-              Background_card(), 
+              const BackgroundCard(), 
               MainList(
                 title: "Released in the past year",
                 getList: getUpComming(),
@@ -43,7 +43,7 @@ class ScreenHome extends StatelessWidget {
                    getList: getTrending(),
                 listName: trendingList ,
               ),
-              NumberList(),
+              const NumberList(),
               MainList(
                 listName:popularList ,
                 title: "Tense Dramas",
@@ -76,15 +76,15 @@ class ScreenHome extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Text("TV Shows",style: KHomeTitleText ),
-                        Text("Movies",style: KHomeTitleText ),
-                        Text("Categories",style: KHomeTitleText ), 
+                        Text("TV Shows",style: kHomeTitleText ),
+                        Text("Movies",style: kHomeTitleText ),
+                        Text("Categories",style: kHomeTitleText ), 
 
                       ],
                     )
                   ],
                 ),
-              ): KHeight, 
+              ): kHeight, 
             ],
           ),
         );

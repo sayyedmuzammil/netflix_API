@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/colors.dart';
-import 'package:netflix/presentation/home/widgets/custom_Button_widget.dart';
+import 'package:netflix/presentation/home/widgets/custom_button_widget.dart';
 
-class Background_card extends StatelessWidget {
-  const Background_card({ Key? key }) : super(key: key);
+class BackgroundCard extends StatelessWidget {
+  const BackgroundCard({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class Background_card extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     const CustomButtonWidget(icon: Icons.add, title: "My List",), 
-                    _PlayButton(),
+                    playButton(),
                      const CustomButtonWidget(icon: Icons.info, title: "Info",),
                   ],
                 ),
@@ -40,11 +40,11 @@ class Background_card extends StatelessWidget {
        
   }
   
-  TextButton _PlayButton() {
+  TextButton playButton() {
     return TextButton.icon(
                     style: ButtonStyle(
                         backgroundColor:
-                            MaterialStateProperty.all(KwhiteColor)),
+                            MaterialStateProperty.all(kWhiteColor)),
                     onPressed: () {},
                     icon: const Icon(
                       Icons.play_arrow,

@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/presentation/new_and_hot/widgets/scroll1.dart';
 import 'package:netflix/presentation/new_and_hot/widgets/scroll2.dart';
-import 'package:netflix/presentation/new_and_hot/widgets/topTitle2Widget.dart';
+import 'package:netflix/presentation/new_and_hot/widgets/top_title2_widget.dart';
 import 'package:netflix/presentation/widgets/app_bar_widget.dart';
 
 List<String> topList = ['Coming Soon', 'Everyone Watching', 'Top 10'];
-
 class NewAndHot extends StatefulWidget {
   const NewAndHot({Key? key}) : super(key: key);
 
@@ -22,7 +21,7 @@ class _NewAndHotState extends State<NewAndHot> {
   Future scrollToItem(itemKey) async {
     final context = itemKey.currentContext!;
 
-    await Scrollable.ensureVisible(context, duration: Duration(seconds: 1));
+    await Scrollable.ensureVisible(context, duration: const Duration(seconds: 1));
   }
 
   bool btnColor = true;

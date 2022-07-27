@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/core/colors/constants.dart';
 import 'package:netflix/presentation/home/widgets/main_title.dart';
 
 class MainList extends StatelessWidget {
   final String title;
-  final getList;
-  final listName;
-   MainList({
+  final dynamic getList;
+  final List<dynamic> listName;
+   const MainList({
      required this.getList, 
     required this.title,
     required this.listName,
@@ -19,7 +18,7 @@ class MainList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         MainTitle(title: title,), 
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         SizedBox(
@@ -45,12 +44,12 @@ class MainList extends StatelessWidget {
                           ),
                         );
                       },
-                      separatorBuilder: (ctx, index) => SizedBox(
+                      separatorBuilder: (ctx, index) => const SizedBox(
                             width: 10, 
                           ),
                       itemCount: listName.length);
                 } else {
-                  return Center(child: CircularProgressIndicator());
+                  return const Center(child: CircularProgressIndicator());
                 }
               },
             ))

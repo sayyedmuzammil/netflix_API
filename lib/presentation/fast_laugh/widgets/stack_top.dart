@@ -1,13 +1,15 @@
-
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/constants.dart';
-import 'package:netflix/presentation/fast_laugh/widgets/stackIcons.dart';
+import 'package:netflix/presentation/fast_laugh/widgets/stack_icons.dart';
 
 class StackTop extends StatelessWidget {
-  const StackTop({
+  
+   const StackTop({
+      required this.index,
     Key? key,
   }) : super(key: key);
 
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -29,13 +31,14 @@ class StackTop extends StatelessWidget {
           //right side
           Column(
             mainAxisAlignment: MainAxisAlignment.end, 
-            children:const [
+            children:  const[
               CircleAvatar(
                 radius: 30, 
+                // backgroundColor: Colors.accents[index],  
                 
                 backgroundImage: NetworkImage("https://th.bing.com/th/id/OIP.JxplbFtV_MGEefoicK7C5wHaHa?w=199&h=199&c=7&r=0&o=5&dpr=1.8&pid=1.7"),
               ),
-              KHeight, 
+              kHeight, 
               VideoActionsWidget(icon: Icons.emoji_emotions, title: 'LOL'),
                VideoActionsWidget(icon: Icons.add, title: 'My List'),
                 VideoActionsWidget(icon: Icons.share, title: 'Share'),

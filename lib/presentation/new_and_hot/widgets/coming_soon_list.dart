@@ -4,31 +4,26 @@ import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/core/colors/constants.dart';
 import 'package:netflix/presentation/new_and_hot/widgets/button_icon_bottom.dart';
 
-class comingSoonList extends StatelessWidget {
-  comingSoonList(
+class ComingSoonList extends StatelessWidget {
+final int index;
+   final String date;
+     final List movieList;
+  const ComingSoonList(
       {Key? key,
       required this.index,
       required this.date,
       required this.movieList})
       : super(key: key);
-  // ignore: prefer_typing_uninitialized_variables
-  final index;
-  // ignore: prefer_typing_uninitialized_variables
-  final date;
-  String? monthFormate;
-  String day = '';
-  List movieList;
+ 
   @override
   Widget build(BuildContext context) {
+     String monthFormate='';
+  String day ='';
     String uri = movieList[index]['poster_path'];
-    // String movieNameImg = movieList[index]['backdrop_path'];
     monthFormate = (DateFormat("MMM").format(DateTime.parse(date))).toString();
     day = (DateFormat("dd").format(DateTime.parse(date))).toString();
-
     return SizedBox(
       width: double.infinity,
-      //height: 260,
-      // color: Colors.red,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +33,7 @@ class comingSoonList extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  monthFormate!,
+                  monthFormate,
                   style: const TextStyle(
                       fontSize: 15, fontWeight: FontWeight.bold),
                 ),
@@ -57,9 +52,7 @@ class comingSoonList extends StatelessWidget {
                 Stack(
                   children: [
                     Container(
-                      //width: 320,
                       height: 200,
-                      //color: Colors.green,
                       decoration: BoxDecoration(
                           image: DecorationImage(
                         fit: BoxFit.cover,
@@ -102,17 +95,17 @@ class comingSoonList extends StatelessWidget {
                               icon: Icons.info_outline, iconText: "Info"),
                         ],
                       ),
-                      KHeight,
-                      KHeight,
+                      kHeight,
+                      kHeight,
                       const Text(
                         'Season',
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
-                      KHeight,
+                      kHeight,
                       Text(
                         movieList[index]['overview'],
-                        style: const TextStyle(color: KgreyColor),
+                        style: const TextStyle(color: kGreyColor),
                       ),
                     ],
                   ),

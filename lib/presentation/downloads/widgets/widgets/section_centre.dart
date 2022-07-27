@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix/presentation/downloads/widgets/widgets/centreImagesWidgets.dart';
+import 'package:netflix/presentation/downloads/widgets/widgets/centre_images_widgets.dart';
 
 class Section2 extends StatelessWidget {
    Section2 ({ Key? key }) : super(key: key);
@@ -15,7 +15,7 @@ final List imageList=[
     return Column(
       children: [
         Container(
-          margin: EdgeInsets.symmetric(horizontal: 50 ),
+          margin: const EdgeInsets.symmetric(horizontal: 50 ),
             width: size.width,
             height: size.height*.55 ,
             child: Stack(

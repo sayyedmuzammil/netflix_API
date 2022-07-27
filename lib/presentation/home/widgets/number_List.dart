@@ -1,4 +1,3 @@
-import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:netflix/core/colors/constants.dart';
 import 'package:netflix/presentation/home/widgets/main_title.dart';
@@ -14,12 +13,12 @@ class NumberList extends StatelessWidget {
     return Column(
       
       crossAxisAlignment: CrossAxisAlignment.start, 
-      children:  [
+      children:  const [
         MainTitle(title: "Top 10 Tv Shows in India today" ),
-       KHeight,
+       kHeight,
        
           NumberCard(),
-         KHeight, 
+         kHeight, 
       ],
     );
   }

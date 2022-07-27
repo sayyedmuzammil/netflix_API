@@ -9,14 +9,14 @@ class Section1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        SizedBox(height: 25,), 
+       const SizedBox(height: 25,), 
         Row(
                 children: [
                   kWidth,
                   const Icon(
                     Icons.file_download_sharp,
                     size: 30,
-                    color: KwhiteColor,
+                    color: kWhiteColor,
                   ),
                   kWidth,
 
@@ -33,7 +33,7 @@ class Section1 extends StatelessWidget {
                           ), */
                           Text(
                             "Smart Downloads".toUpperCase(),
-                            style: TextStyle(color: KgreyColor[600]),
+                            style: TextStyle(color: kGreyColor[600]),
                           ),
                         ],
                       ),

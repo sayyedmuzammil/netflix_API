@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/services.dart';
-import 'package:netflix/core/colors/colors.dart';
 import 'package:netflix/presentation/main_page/widgets/screen_main_page.dart';
+import 'core/colors/colors.dart';
 
 void main() {
   // getPopularMovies(); 

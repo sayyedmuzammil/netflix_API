@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix/core/APIFunctions/datas.dart';
-import 'package:netflix/presentation/new_and_hot/widgets/everyOnesList.dart';
+import 'package:netflix/presentation/new_and_hot/widgets/every_ones_list.dart';
 
 
 class Scroll2 extends StatelessWidget {
@@ -23,7 +23,6 @@ class Scroll2 extends StatelessWidget {
               scrollDirection: Axis.vertical,
               shrinkWrap: true,
               itemBuilder: (ctx, index) {
-                String? date = topratedList[index]["release_date"];
 
                 return EveryOnesWatchingList(
                   index: index,
